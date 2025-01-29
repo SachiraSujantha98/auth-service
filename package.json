@@ -1,0 +1,11 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "author": "Sachira Sujantha",
+  "description": "Demonstration of protecting API gateway endpoints with auth0",
+  "license": "MIT",
+  "dependencies": {
+    "auth-service": "file:",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
