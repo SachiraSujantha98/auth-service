@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 
 const generatePolicy = (principalId, methodArn) => {
   const apiGatewayWildcard = methodArn.split('/', 2).join('/') + '/*';
@@ -18,7 +18,7 @@ const generatePolicy = (principalId, methodArn) => {
   };
 };
 
-export async function handler(event, context) {
+module.exports.handler = async (event, context) => {
   if (!event.authorizationToken) {
     throw 'Unauthorized';
   }
